@@ -1,0 +1,187 @@
+:root {
+  --primary-color: #6c63ff;
+  --secondary-color: #ff6584;
+  --bg-dark: #111319;
+  --bg-card: #1a1d24;
+  --text-light: #f6f6f6;
+  --text-muted: #bfbfbf;
+  --transition-fast: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+header {
+  background: var(--bg-card);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-light);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: var(--text-light);
+  font-weight: 500;
+  position: relative;
+}
+
+#hero {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url("https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80")
+    center/cover;
+  position: relative;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+}
+
+.btn {
+  background: var(--secondary-color);
+  padding: 12px 25px;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 25px;
+  transition: var(--transition-fast);
+}
+
+.btn:hover {
+  background: #ff4f72;
+  transform: translateY(-3px);
+}
+
+section {
+  width: 90%;
+  margin: auto;
+  padding: 80px 0;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.3rem;
+  color: var(--primary-color);
+}
+
+#about .about-content {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+#about img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid var(--primary-color);
+  margin-bottom: 20px;
+}
+
+#skills .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 25px;
+  text-align: center;
+}
+
+.skill-item {
+  background: var(--bg-card);
+  padding: 25px;
+  border-radius: 10px;
+}
+
+#projects .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: var(--bg-card);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: var(--bg-card);
+  color: var(--text-muted);
+}
